@@ -4,9 +4,27 @@
              x:Class="tipCalculator.MainPage">
 
     <VerticalStackLayout>
-        <Label Text="Total da conta"/>
-            <Entry x:Name="billInput" Placeholder="Insira o valor" Keyboard="Numeric"/>
-            <Label Text="Tip" />
+        <Grid Margin="20,30,20,10">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Label Text="Total da conta"/>
+            <Entry x:Name="billInput" Placeholder="Insira o valor" Keyboard="Numeric" Grid.Column="1"/>
+            <Label Text="Tip" Grid.Row="2" />
             <Label x:Name="tipOutput" Text="0.00"/>
 
             <Label Text="Total" />
@@ -21,6 +39,14 @@
 
             <Button x:Name="roundDown" Text="Round Down"/>
             <Button x:Name="roundUp" Text="Round Up"/>
-    </VerticalStackLayout>
 
+        </Grid>
+
+        <!--Dentro do "Grid Margin" primeiro esquerda, cima, direita, baixo-->
+
+        <!-- <Grid Margin="20,300,200,20">
+            <Label Text="By default, a Grid contains one row and one column." />
+        </Grid> -->
+
+    </VerticalStackLayout>
 </ContentPage>
